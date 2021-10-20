@@ -53,9 +53,12 @@ Regreso: destino → pueblo 2’ → pueblo 1 → Pueblo Origen
 
 
 
+
 /*
 4.- Un almacén tiene capacidad para apilar “n” contenedores. Cada contenedor tiene un número de identificación.
 Cuando se desea retirar un contenedor específico, deben retirarse primero los contenedores que están encima de él
 y colocarlos en otra pila, efectuar el retiro y regresarlos a su respectivo lugar.
 Implementar en codigo esta funcionalidad.
+Entrada: [ConA, ConB, ConC, ConD, ConE]
+Salida: [ConA, ConB, ConD, ConE]
 */
