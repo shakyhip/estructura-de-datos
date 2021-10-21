@@ -37,7 +37,7 @@ function reemplazar(pila, nuevo, viejo) {
     return pila;
 }
 
-var remp = reemplazar([3,2,3,4,6,8,1,2,5,5], 7, 2);
+var remp = reemplazar([3, 2, 3, 4, 6, 8, 1, 2, 5, 5], 7, 2);
 console.log(remp);
 
 
@@ -51,7 +51,25 @@ Recorrido: Pueblo Origen → pueblo 1 → pueblo 2 → destino
 Regreso: destino → pueblo 2’ → pueblo 1 → Pueblo Origen
 */
 
+var recorrido = [];
+recorrido.push('Guadalajara');
+recorrido.push('La Venta del Astillero');
+recorrido.push('Santa Cruz del Astillero');
+recorrido.push('El Arenal');
+recorrido.push('Amatitán');
+recorrido.push('Tequila');
+console.log(recorrido);
 
+function retorno(pila) {
+    var pilaRetorno = [];
+    while (pila.length != 0) {
+        pilaRetorno.push(pila.pop());
+        //let pueblo = pila.pop();
+        //pilaRetorno.push(pueblo);
+    }
+    return pilaRetorno;
+}
+console.log(retorno(recorrido));
 
 
 /*
@@ -62,3 +80,22 @@ Implementar en codigo esta funcionalidad.
 Entrada: [ConA, ConB, ConC, ConD, ConE]
 Salida: [ConA, ConB, ConD, ConE]
 */
+var contenedores = ['ConA', 'ConB', 'ConC', 'ConD', 'ConE'];
+console.log(contenedores);
+
+function sacar(pila, contenedor) {
+    let pilaSecundaria = [];
+
+    while (pila[pila.length - 1] != contenedor) {
+        pilaSecundaria.push(pila.pop());
+    }
+    pila.pop();
+
+    while (pilaSecundaria.length != 0) {
+        pila.push(pilaSecundaria.pop());
+    }
+
+    return pila;
+}
+
+console.log(sacar(contenedores, 'ConC'));
